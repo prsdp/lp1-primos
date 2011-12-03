@@ -1,3 +1,3 @@
-Descrição de Números Primos
+### Descrição de Números Primos
 
-Trabalho final de matéria Linguagem de Programação 1
+Trabalho final da matéria Linguagem de Programação 1
