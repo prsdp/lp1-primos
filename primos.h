@@ -31,12 +31,15 @@ int is_prime(int num){
 // Esta função recebe 2 parâmetros sendo
 // eles com limite inferior e superior,
 // retornando um vetor int de primos.
+// O parâmetro *c é um argumento de ponteiro
+// que seta a quantidade de posicões de um
+// vetor.
 int *interval_primes(int li, int ls, int *c){
 
     int i, cont=0;
     int *vetor;
 
-    vetor = (int*) malloc(2 * sizeof(int));
+    vetor = (int *) calloc(ls,sizeof(int));
 
     for(i=li;i<=ls;i++){
 
@@ -49,4 +52,16 @@ int *interval_primes(int li, int ls, int *c){
     *c = cont;
 
     return vetor;
+}
+
+void interval_primes_ex(int li, int ls){
+
+    int i;
+
+    for(i=li;i<=ls;i++){
+
+        if(is_prime(i)){
+            continue;
+        }
+    }
 }
