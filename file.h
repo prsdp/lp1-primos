@@ -16,7 +16,7 @@ void write_intervals(int li, int ls, double secs) {
         exit(0);
     }
 
-    fprintf(fp, "[%d, %d]\t%f\n", li, ls, secs);
+    fprintf(fp, "%d    %d    %f\n", li, ls, secs);
     fclose(fp);
 }
 
@@ -31,7 +31,7 @@ void create_file() {
     }
 
     fprintf(fp, "#Intervalo X Tempo\n\n");
-    fprintf(fp, "#Intervalo\tTempo(s)\n");
+    fprintf(fp, "#li    ls    segs\n");
     fclose(fp);
 }
 
