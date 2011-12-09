@@ -3,7 +3,7 @@
  * e procedimentos relativos a números
  * primos.
  *
- * @outhor: Priscila Paixão
+ * @author: Priscila Paixão
  *
  */
 
