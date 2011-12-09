@@ -6,7 +6,7 @@
 rm=/bin/rm -f
 CC= cc
 DEFS=
-PROGNAME= lp1
+PROGNAME= main
 INCLUDES=  -I.
 LIBS=
 
@@ -28,4 +28,4 @@ $(PROGNAME) : $(OBJS)
 	$(CC) $(CFLAGS) -o $(PROGNAME) $(OBJS) $(LIBS)
 
 clean:
-	$(rm) $(OBJS) $(PROGNAME) core *~ *.dat main *.csv
+	$(rm) $(OBJS) $(PROGNAME) core *~ *.dat *.csv
