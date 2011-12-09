@@ -15,30 +15,23 @@
 #include <stdlib.h>
 #include <time.h>
 #include "primos.h"
+#include "file.h"
 #include "intervals.h"
 
 int main (int argc, char **argv){
 
-    print_interval(1,10);
-    printf ("\t %fs",get_time_interval(1,10));
-    print_interval(1,20);
-    printf ("\t %fs",get_time_interval(1,20));
-    print_interval(1,30);
-    printf ("\t %fs",get_time_interval(1,30));
-    print_interval(1,40);
-    printf ("\t %fs",get_time_interval(1,40));
-    print_interval(1,50);
-    printf ("\t %fs",get_time_interval(1,50));
-    print_interval(1,60);
-    printf ("\t %fs",get_time_interval(1,60));
-    print_interval(1,70);
-    printf ("\t %fs",get_time_interval(1,70));
-    print_interval(1,80);
-    printf ("\t %fs",get_time_interval(1,80));
-    print_interval(1,90);
-    printf ("\t %fs",get_time_interval(1,90));
-    print_interval(1,100);
-    printf ("\t %fs",get_time_interval(1,100));
+    create_file();
+
+    print_interval(1,10000);
+    print_interval(10001,20000);
+    print_interval(20001,30000);
+    print_interval(30001,40000);
+    print_interval(40001,50000);
+    print_interval(50001,60000);
+    print_interval(60001,70000);
+    print_interval(70001,80000);
+    print_interval(80001,90000);
+    print_interval(90001,100000);
 
     printf("\n\n");
 
