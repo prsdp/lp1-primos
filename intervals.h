@@ -3,7 +3,7 @@
  * de execução necessário para encontrar
  * os primos de cade intervalo.
  *
- * @outhor: Priscila Paixão
+ * @author: Priscila Paixão
  *
  */
 
@@ -12,8 +12,17 @@ void print_interval(int li, int ls){
 
     int i,j,cont=0;
     int *vetor;
+    //time_t start, end;
+    clock_t start;
+
+    //time(&start);
+    start = clock();
 
     vetor = interval_primes(li, ls, &cont);
+
+    //time(&end);
+
+    write_intervals(li,ls,(clock() - start) / (double)CLOCKS_PER_SEC);//difftime(end,start));
 
     printf("\n Intervalo [%d,%d]  = {",li,ls);
 
@@ -27,22 +36,4 @@ void print_interval(int li, int ls){
 
     printf("}");
     free(vetor);
-}
-
-// Esta função tem como parâmetros o limite
-// inferior e superior dos intervalos e
-// retorna o tempo de execução do intervalo.
-double get_time_interval(int li, int ls){
-
-    //time_t start, end;
-    clock_t start;
-
-    //time(&start);
-    start = clock();
-
-    interval_primes_ex(li,ls);
-
-    //time(&end);
-
-    return (clock() - start) / (double)CLOCKS_PER_SEC;//difftime(end,start);
 }
