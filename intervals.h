@@ -54,7 +54,7 @@ int *interval_primes(int li, int ls, int *c){
     return vetor;
 }
 
-void write_intervals(int li, ls, double secs) {
+void write_intervals(int li, int ls, double secs) {
 
     FILE *fp;
 
@@ -65,7 +65,7 @@ void write_intervals(int li, ls, double secs) {
         exit(0);
     }
 
-    fprintf(fp. "%f,%d,%d\n", secs, li, ls);
+    fprintf(fp, "%f,%d,%d\n", secs, li, ls);
     fclose(fp);
 }
 
